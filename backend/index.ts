@@ -31,6 +31,7 @@ fastify.post(
       );
     }
 
+    // We add the new department but remove the parent of the child to avoid having many nested objects
     company.departments.push({
       id: uniqueId(),
       height: parentDepartment ? parentDepartment.height + 1 : 0,
@@ -93,6 +94,7 @@ fastify.put(
       (department) => department.id === body.newParentId
     );
 
+    // We update the parent but remove the parent of the child to avoid having many nested objects
     if (department && newParentDepartment) {
       department.height = newParentDepartment.height + 1;
       department.parent = {
