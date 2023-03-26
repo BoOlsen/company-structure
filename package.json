@@ -1,5 +1,22 @@
 {
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./dist/index.js"
+  },
   "dependencies": {
-    "fastify": "^4.15.0"
-  }
+    "fastify": "^4.15.0",
+    "lodash": "^4.17.21",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.15.10"
+  },
+  "name": "company-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
